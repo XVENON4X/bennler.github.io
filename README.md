@@ -25,7 +25,7 @@
     <style>
         .button {
             display: inline-block;
-            padding: 30px 40px;
+            padding: 15px 30px;
             font-size: 36px;
             color: white;
             background-color: #282728;
@@ -33,7 +33,7 @@
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
-            margin: 50px 400px
+            margin: 50px 50px
         }
         .button:hover {
             background-color: #0056b3;
