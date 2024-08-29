@@ -25,7 +25,7 @@
     <style>
         .button {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 40px 20px;
             font-size: 16px;
             color: white;
             background-color: #282728;
@@ -41,7 +41,7 @@
 </head>
 <body>
 
-<a href="https://www.youtube.com/watch?v=eUUpHWMQNUE" class="button">Przejdź do strony</a>
+<a href="https://www.youtube.com/watch?v=eUUpHWMQNUE" class="button">tu wpisujesz nazwe</a>
 
 </body>
 </html>
