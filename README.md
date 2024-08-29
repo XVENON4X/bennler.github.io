@@ -17,23 +17,30 @@
 </head>
 <body>
     
+<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Przycisk przekierowujący</title>
+    <title>Przykładowe Przycisk</title>
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
         .button {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 36px;
+            padding: 10px 20px;
+            font-size: 16px;
             color: white;
-            background-color: #282728;
-            text-align: center;
-            text-decoration: none;
+            background-color: #007bff;
+            border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin: 50px 50px
+            margin: 10px;
         }
         .button:hover {
             background-color: #0056b3;
@@ -42,12 +49,23 @@
 </head>
 <body>
 
-<a href="https://www.youtube.com/watch?v=eUUpHWMQNUE" class="button">tu wpisujesz nazwe</a>
+<button class="button" onclick="window.location.href='https://whatsmyname.app/'">Wysz. po nicku</button>
+<button class="button" onclick="window.location.href='https://facecheck.id'">Wysz. po twarzy</button>
+<button class="button" onclick="window.location.href='https://jimpl.com'">Inf. ze zdj.</button>
+<button class="button" onclick="window.location.href='https://grabify.link'">Zbieraczka z linku</button>
+<button class="button" onclick="openAll()">Otwórz wszystkie</button>
+
+<script>
+function openAll() {
+    window.open('https://whatsmyname.app/', '_blank');
+    window.open('https://facecheck.id', '_blank');
+    window.open('https://jimpl.com', '_blank');
+    window.open('https://grabify.link', '_blank');
+}
+</script>
 
 </body>
 </html>
 
-</body>
-</html>
 
 
