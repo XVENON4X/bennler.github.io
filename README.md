@@ -33,7 +33,7 @@
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
-            margin: 100px 20px
+            margin: 50px 100px
         }
         .button:hover {
             background-color: #0056b3;
