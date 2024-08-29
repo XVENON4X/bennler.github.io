@@ -16,8 +16,7 @@
     </style>
 </head>
 <body>
-    
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -36,36 +35,43 @@
             padding: 10px 20px;
             font-size: 16px;
             color: white;
-            background-color: #007bff;
+            background-color: #282728;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             margin: 10px;
         }
         .button:hover {
-            background-color: #0056b3;
+            background-color: #3e3e3e;
         }
     </style>
 </head>
 <body>
 
-<button class="button" onclick="window.location.href='https://whatsmyname.app/'">Wysz. po nicku</button>
-<button class="button" onclick="window.location.href='https://facecheck.id'">Wysz. po twarzy</button>
-<button class="button" onclick="window.location.href='https://jimpl.com'">Inf. ze zdj.</button>
-<button class="button" onclick="window.location.href='https://grabify.link'">Zbieraczka z linku</button>
-<button class="button" onclick="openAll()">Otwórz wszystkie</button>
+<a href="https://whatsmyname.app/" target="_blank">
+    <button class="button">Wysz. po nicku</button>
+</a>
+<a href="https://facecheck.id" target="_blank">
+    <button class="button">Wysz. po twarzy</button>
+</a>
+<a href="https://jimpl.com" target="_blank">
+    <button class="button">Inf. ze zdj.</button>
+</a>
+<a href="https://grabify.link" target="_blank">
+    <button class="button">Zbieraczka z linku</button>
+</a>
+<button class="button" onclick="openFirst()">Otwórz wszystko</button>
 
 <script>
-function openAll() {
+function openFirst() {
     window.open('https://whatsmyname.app/', '_blank');
-    window.open('https://facecheck.id', '_blank');
-    window.open('https://jimpl.com', '_blank');
-    window.open('https://grabify.link', '_blank');
+    window.location.href = 'https://facecheck.id';
 }
 </script>
 
 </body>
 </html>
+
 
 
 
