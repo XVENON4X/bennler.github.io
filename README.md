@@ -25,15 +25,15 @@
     <style>
         .button {
             display: inline-block;
-            padding: 15px 20px;
-            font-size: 16px;
+            padding: 30px 40px;
+            font-size: 36px;
             color: white;
             background-color: #282728;
             text-align: center;
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
-            margin: 50px 20px
+            margin: 100px 20px
         }
         .button:hover {
             background-color: #0056b3;
