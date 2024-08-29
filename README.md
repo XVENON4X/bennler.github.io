@@ -28,7 +28,7 @@
             padding: 10px 20px;
             font-size: 16px;
             color: white;
-            background-color: #007bff;
+            background-color: #282728;
             text-align: center;
             text-decoration: none;
             border-radius: 5px;
@@ -41,7 +41,7 @@
 </head>
 <body>
 
-<a href="https://www.przykładowa-strona.com" class="button">Przejdź do strony</a>
+<a href="https://www.youtube.com/watch?v=eUUpHWMQNUE" class="button">Przejdź do strony</a>
 
 </body>
 </html>
