@@ -95,7 +95,6 @@ function openAll() {
         <p style="font-size: 2em; color: green;">BEZPIECZNE</p>
     </div>
 </body>
-</html>
 
 
 
