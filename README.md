@@ -85,6 +85,8 @@ function openAll() {
 </body>
 </html>
 
+#zabiezpieczenia
+
 
 
 
