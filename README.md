@@ -92,7 +92,7 @@ function openAll() {
 </head>
 <body>
     <div style="text-align: center;">
-        <p style="font-size: 2em; color: green;">Twój powiększony tekst na środku w poziomie</p>
+        <p style="font-size: 2em; color: green;">BEZPIECZNE</p>
     </div>
 </body>
 </html>
