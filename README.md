@@ -64,15 +64,27 @@
 
 <script>
 function openAll() {
-    window.open('https://whatsmyname.app/', '_blank');
-    window.open('https://facecheck.id', '_blank');
-    window.open('https://jimpl.com', '_blank');
-    window.open('https://grabify.link', '_blank');
+    setTimeout(function() {
+        window.open('https://whatsmyname.app/', '_blank');
+    }, 0);
+
+    setTimeout(function() {
+        window.open('https://facecheck.id', '_blank');
+    }, 1000);
+
+    setTimeout(function() {
+        window.open('https://jimpl.com', '_blank');
+    }, 2000);
+
+    setTimeout(function() {
+        window.open('https://grabify.link', '_blank');
+    }, 3000);
 }
 </script>
 
 </body>
 </html>
+
 
 
 
