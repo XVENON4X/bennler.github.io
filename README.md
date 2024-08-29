@@ -70,15 +70,15 @@ function openAll() {
 
     setTimeout(function() {
         window.open('https://facecheck.id', '_blank');
-    }, 2000);
-
-    setTimeout(function() {
-        window.open('https://jimpl.com', '_blank');
     }, 3000);
 
     setTimeout(function() {
+        window.open('https://jimpl.com', '_blank');
+    }, 5000);
+
+    setTimeout(function() {
         window.open('https://grabify.link', '_blank');
-    }, 4000);
+    }, 7000);
 }
 </script>
 
