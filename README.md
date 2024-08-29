@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -18,7 +17,7 @@
     </style>
 </head>
 <body>
-    <!-- Możesz dodać treść strony tutaj -->
+    # witam wszystkich
 </body>
 </html>
 
