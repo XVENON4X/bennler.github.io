@@ -51,12 +51,15 @@
 <a href="https://whatsmyname.app/" target="_blank">
     <button class="button">Wysz. po nicku</button>
 </a>
+}, 8000);
 <a href="https://facecheck.id" target="_blank">
     <button class="button">Wysz. po twarzy</button>
 </a>
+}, 8000);
 <a href="https://jimpl.com" target="_blank">
     <button class="button">Inf. ze zdj.</button>
 </a>
+}, 8000);
 <a href="https://grabify.link" target="_blank">
     <button class="button">Zbieraczka z linku</button>
 </a>
