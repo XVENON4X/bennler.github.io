@@ -66,15 +66,15 @@
 function openAll() {
     setTimeout(function() {
         window.open('https://whatsmyname.app/', '_blank');
-    }, 1000);
+    }, 5000);
 
     setTimeout(function() {
         window.open('https://facecheck.id', '_blank');
-    }, 2000);
+    }, 5000);
 
     setTimeout(function() {
         window.open('https://jimpl.com', '_blank');
-    }, 3000);
+    }, 5000);
 
     setTimeout(function() {
         window.open('https://grabify.link', '_blank');
