@@ -16,10 +16,38 @@
     </style>
 </head>
 <body>
-    # witam wszystkich
+    
+    <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przycisk przekierowujący</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<a href="https://www.przykładowa-strona.com" class="button">Przejdź do strony</a>
+
 </body>
 </html>
-header, footer, .navbar {
-    display: none;
-}
+
+</body>
+</html>
+
 
