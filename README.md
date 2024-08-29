@@ -78,7 +78,7 @@ function openAll() {
 
     setTimeout(function() {
         window.open('https://grabify.link', '_blank');
-    }, 7000);
+    }, 7500);
 }
 </script>
 
