@@ -25,7 +25,7 @@
     <style>
         .button {
             display: inline-block;
-            padding: 40px 20px;
+            padding: 15px 20px;
             font-size: 16px;
             color: white;
             background-color: #282728;
