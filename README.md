@@ -60,30 +60,18 @@
 <a href="https://grabify.link" target="_blank">
     <button class="button">Zbieraczka z linku</button>
 </a>
-<button class="button" onclick="openAll()">Otwórz wszystko</button>
+<button class="button" onclick="openFirst()">Otwórz wszystko</button>
 
 <script>
-function openAll() {
-    setTimeout(function() {
-        window.open('https://whatsmyname.app/', '_blank');
-    }, 0);
-
-    setTimeout(function() {
-        window.open('https://facecheck.id', '_blank');
-    }, 1000);
-
-    setTimeout(function() {
-        window.open('https://jimpl.com', '_blank');
-    }, 2000);
-
-    setTimeout(function() {
-        window.open('https://grabify.link', '_blank');
-    }, 3000);
+function openFirst() {
+    window.open('https://whatsmyname.app/', '_blank');
+    window.location.href = 'https://facecheck.id';
 }
 </script>
 
 </body>
 </html>
+
 
 
 
