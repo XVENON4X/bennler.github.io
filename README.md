@@ -94,10 +94,11 @@ function openAll() {
 </head>
 <body>
     <div style="text-align: center;">
-        <p>Twój tekst na środku w poziomie</p>
+        <p style="font-size: 2em;">Twój powiększony tekst na środku w poziomie</p>
     </div>
 </body>
 </html>
+
 
 
 
