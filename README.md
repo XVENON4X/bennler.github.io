@@ -66,19 +66,19 @@
 function openAll() {
     setTimeout(function() {
         window.open('https://whatsmyname.app/', '_blank');
-    }, 5000);
+    }, 1000);
 
     setTimeout(function() {
         window.open('https://facecheck.id', '_blank');
-    }, 5000);
+    }, 2500);
 
     setTimeout(function() {
         window.open('https://jimpl.com', '_blank');
-    }, 5000);
+    }, 4000);
 
     setTimeout(function() {
         window.open('https://grabify.link', '_blank');
-    }, 4000);
+    }, 5500);
 }
 </script>
 
