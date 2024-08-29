@@ -51,29 +51,29 @@
 <a href="https://whatsmyname.app/" target="_blank">
     <button class="button">Wysz. po nicku</button>
 </a>
-}, 8000);
 <a href="https://facecheck.id" target="_blank">
     <button class="button">Wysz. po twarzy</button>
 </a>
-}, 8000);
 <a href="https://jimpl.com" target="_blank">
     <button class="button">Inf. ze zdj.</button>
 </a>
-}, 8000);
 <a href="https://grabify.link" target="_blank">
     <button class="button">Zbieraczka z linku</button>
 </a>
-<button class="button" onclick="openFirst()">Otwórz wszystko</button>
+<button class="button" onclick="openAll()">Otwórz wszystko</button>
 
 <script>
-function openFirst() {
+function openAll() {
     window.open('https://whatsmyname.app/', '_blank');
-    window.location.href = 'https://facecheck.id';
+    window.open('https://facecheck.id', '_blank');
+    window.open('https://jimpl.com', '_blank');
+    window.open('https://grabify.link', '_blank');
 }
 </script>
 
 </body>
 </html>
+
 
 
 
