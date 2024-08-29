@@ -65,9 +65,13 @@
 <script>
 function openAll() {
     window.open('https://whatsmyname.app/', '_blank');
+    }, 3000);
     window.open('https://facecheck.id', '_blank');
+    }, 3000);
     window.open('https://jimpl.com', '_blank');
+    }, 3000);
     window.open('https://grabify.link', '_blank');
+    }, 3000);
 }
 </script>
 
