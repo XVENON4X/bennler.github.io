@@ -19,14 +19,7 @@
     # witam wszystkich
 </body>
 </html>
-body {
-    margin: 0;
-    padding: 0;
-    background: url('Matrix%20wallpaper%20gif.gif') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+header, footer, .navbar {
+    display: none;
 }
-
 
