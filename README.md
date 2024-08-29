@@ -85,7 +85,20 @@ function openAll() {
 </body>
 </html>
 
-#zabiezpieczenia
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przykład</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <p>Twój tekst na środku w poziomie</p>
+    </div>
+</body>
+</html>
+
 
 
 
