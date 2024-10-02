@@ -97,6 +97,7 @@ function openAll() {
 </body>
 
 
+<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -134,6 +135,7 @@ function openAll() {
     <p id="ip">Ładowanie IP...</p>
 </body>
 </html>
+
 
 
 
