@@ -109,10 +109,8 @@ function openAll() {
                 const response = await fetch('https://api.ipify.org?format=json');
                 const data = await response.json();
                 const userIp = data.ip;
-
                 // Wyświetlenie IP na stronie
                 document.getElementById('ip').textContent = `Twoje IP to: ${userIp}`;
-
                 // Wysłanie IP do backendu
                 await fetch('http://localhost:3000/save-ip', {
                     method: 'POST',
