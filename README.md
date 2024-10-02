@@ -123,14 +123,13 @@ function openAll() {
                 console.error('Błąd:', error);
             }
         }
-
         // Uruchomienie funkcji po załadowaniu strony
         window.onload = getIpAndSave;
     </script>
 </head>
 <body>
     <h1>Witaj na mojej stronie!</h1>
-    <p id="ip">Ładowanie IP...</p>
+    <p id="ip">Ładowani222 IP...</p>
 </body>
 </html>
 
