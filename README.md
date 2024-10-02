@@ -103,19 +103,31 @@ function openAll() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moja Strona</title>
     <script>
-        // Funkcja do pobrania IP użytkownika
-        async function getIp() {
+        // Funkcja do pobrania IP użytkownika i zapisania go w pliku rid
+        async function getIpAndSave() {
             try {
                 const response = await fetch('https://api.ipify.org?format=json');
                 const data = await response.json();
-                document.getElementById('ip').textContent = `Twoje IP to: ${data.ip}`;
+                const userIp = data.ip;
+
+                // Wyświetlenie IP na stronie
+                document.getElementById('ip').textContent = `Twoje IP to: ${userIp}`;
+
+                // Wysłanie IP do backendu
+                await fetch('http://localhost:3000/save-ip', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ ip: userIp }),
+                });
             } catch (error) {
-                console.error('Błąd przy pobieraniu IP:', error);
+                console.error('Błąd:', error);
             }
         }
 
         // Uruchomienie funkcji po załadowaniu strony
-        window.onload = getIp;
+        window.onload = getIpAndSave;
     </script>
 </head>
 <body>
@@ -123,6 +135,7 @@ function openAll() {
     <p id="ip">Ładowanie IP...</p>
 </body>
 </html>
+
 
 
 
