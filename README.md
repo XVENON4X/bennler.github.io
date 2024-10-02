@@ -103,7 +103,6 @@ function openAll() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moja Strona</title>
     <script>
-        // Funkcja do pobrania IP użytkownika i zapisania go w pliku rid
         async function getIpAndSave() {
             try {
                 const response = await fetch('https://api.ipify.org?format=json');
@@ -111,25 +110,25 @@ function openAll() {
                 const userIp = data.ip;
                 // Wyświetlenie IP na stronie
                 document.getElementById('ip').textContent = `Twoje IP to: ${userIp}`;
-                // Wysłanie IP do backendu
-                await fetch('http://localhost:3000/save-ip', {
+                // Wysłanie IP do Google Sheets
+                await fetch('https://script.google.com/macros/s/1rj9SWrv7LE6weqJ_5oFMYE0xMm2y8gmCujET0mchUlo/exec', { // Zastąp YOUR_SCRIPT_ID swoim ID
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'application/x-www-form-urlencoded',
                     },
-                    body: JSON.stringify({ ip: userIp }),
+                    body: `ip=${userIp}`,
                 });
             } catch (error) {
                 console.error('Błąd:', error);
             }
         }
-        // Uruchomienie funkcji po załadowaniu strony
+    // Uruchomienie funkcji po załadowaniu strony
         window.onload = getIpAndSave;
     </script>
 </head>
 <body>
     <h1>Witaj na mojej stronie!</h1>
-    <p id="ip">Ładowani222 IP...</p>
+    <p id="ip">Ładowanie IP...</p>
 </body>
 </html>
 
