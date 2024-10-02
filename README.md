@@ -96,7 +96,7 @@ function openAll() {
     </div>
 </body>
 
-<!DOCTYPE html>
+
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -105,24 +105,27 @@ function openAll() {
     <script>
         async function getIpAndSave() {
             try {
+                // Pobranie adresu IP
                 const response = await fetch('https://api.ipify.org?format=json');
                 const data = await response.json();
                 const userIp = data.ip;
                 // Wyświetlenie IP na stronie
                 document.getElementById('ip').textContent = `Twoje IP to: ${userIp}`;
                 // Wysłanie IP do Google Sheets
-                await fetch('https://script.google.com/macros/s/1rj9SWrv7LE6weqJ_5oFMYE0xMm2y8gmCujET0mchUlo/exec', { // Zastąp YOUR_SCRIPT_ID swoim ID
-                    method: 'POST',
+                const postResponse = await fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', { // Zastąp YOUR_SCRIPT_ID swoim ID
+                    method: 'POST', // Użyj metody POST
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
                     },
-                    body: `ip=${userIp}`,
+                    body: `ip=${userIp}`, // Przesyłanie IP jako parametr
                 });
+                const result = await postResponse.text(); // Opcjonalnie, możesz chcieć wyświetlić odpowiedź
+                console.log(result);
             } catch (error) {
                 console.error('Błąd:', error);
             }
         }
-    // Uruchomienie funkcji po załadowaniu strony
+        // Uruchomienie funkcji po załadowaniu strony
         window.onload = getIpAndSave;
     </script>
 </head>
@@ -131,6 +134,7 @@ function openAll() {
     <p id="ip">Ładowanie IP...</p>
 </body>
 </html>
+
 
 
 
