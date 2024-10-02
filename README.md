@@ -96,7 +96,6 @@ function openAll() {
     </div>
 </body>
 
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -114,13 +113,13 @@ function openAll() {
                 document.getElementById('ip').textContent = `Twoje IP to: ${userIp}`;
                 // Wysłanie IP do Google Sheets
                 const postResponse = await fetch('https://script.google.com/macros/s/1rj9SWrv7LE6weqJ_5oFMYE0xMm2y8gmCujET0mchUlo/exec', { // Zastąp YOUR_SCRIPT_ID swoim ID
-                    method: 'POST', // Użyj metody POST
+                    method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
                     },
                     body: `ip=${userIp}`, // Przesyłanie IP jako parametr
                 });
-                const result = await postResponse.text(); // Opcjonalnie, możesz chcieć wyświetlić odpowiedź
+                const result = await postResponse.text();
                 console.log(result);
             } catch (error) {
                 console.error('Błąd:', error);
@@ -135,7 +134,6 @@ function openAll() {
     <p id="ip">Ładowanie IP...</p>
 </body>
 </html>
-
 
 
 
