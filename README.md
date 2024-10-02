@@ -112,7 +112,7 @@ function openAll() {
                 // Wyświetlenie IP na stronie
                 document.getElementById('ip').textContent = `Twoje IP to: ${userIp}`;
                 // Wysłanie IP do Google Sheets
-                const postResponse = await fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', { // Zastąp YOUR_SCRIPT_ID swoim ID
+                const postResponse = await fetch('https://script.google.com/macros/s/1rj9SWrv7LE6weqJ_5oFMYE0xMm2y8gmCujET0mchUlo/exec', { // Zastąp YOUR_SCRIPT_ID swoim ID
                     method: 'POST', // Użyj metody POST
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
