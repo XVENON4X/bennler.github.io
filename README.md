@@ -96,6 +96,33 @@ function openAll() {
     </div>
 </body>
 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Strona</title>
+    <script>
+        // Funkcja do pobrania IP użytkownika
+        async function getIp() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                document.getElementById('ip').textContent = `Twoje IP to: ${data.ip}`;
+            } catch (error) {
+                console.error('Błąd przy pobieraniu IP:', error);
+            }
+        }
+
+        // Uruchomienie funkcji po załadowaniu strony
+        window.onload = getIp;
+    </script>
+</head>
+<body>
+    <h1>Witaj na mojej stronie!</h1>
+    <p id="ip">Ładowanie IP...</p>
+</body>
+</html>
 
 
 
