@@ -138,15 +138,13 @@ function openAll() {
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hash Verifier</title>
+  <title>Hash Generator</title>
 </head>
 <body>
-  <h1>Hash Verifier</h1>
+  <h1>Hash Generator</h1>
   <form>
     <label for="password">Enter password:</label>
     <input type="password" id="password" name="password"><br><br>
-    <label for="hash">Enter hash:</label>
-    <input type="text" id="hash" name="hash"><br><br>
     <label for="hash-type">Select hash type:</label>
     <select id="hash-type" name="hash-type">
       <option value="md5">MD5</option>
@@ -158,14 +156,13 @@ function openAll() {
       <option value="sha256-email">SHA256 Email</option>
       <option value="sha512">SHA512</option>
     </select><br><br>
-    <button type="button" onclick="verifyHash()">Verify</button>
+    <button type="button" onclick="generateHash()">Generate Hash</button>
     <p id="result"></p>
   </form>
 
   <script>
-    function verifyHash() {
+    function generateHash() {
       const password = document.getElementById("password").value;
-      const hash = document.getElementById("hash").value;
       const hashType = document.getElementById("hash-type").value;
 
       switch (hashType) {
@@ -173,21 +170,13 @@ function openAll() {
           const md5Hash = crypto.createHash("md5");
           md5Hash.update(password);
           const md5Result = md5Hash.digest("hex");
-          if (md5Result === hash) {
-            document.getElementById("result").innerHTML = "Password matches MD5 hash";
-          } else {
-            document.getElementById("result").innerHTML = "Password does not match MD5 hash";
-          }
+          document.getElementById("result").innerHTML = `MD5 Hash: ${md5Result}`;
           break;
         case "sha1":
           const sha1Hash = crypto.createHash("sha1");
           sha1Hash.update(password);
           const sha1Result = sha1Hash.digest("hex");
-          if (sha1Result === hash) {
-            document.getElementById("result").innerHTML = "Password matches SHA1 hash";
-          } else {
-            document.getElementById("result").innerHTML = "Password does not match SHA1 hash";
-          }
+          document.getElementById("result").innerHTML = `SHA1 Hash: ${sha1Result}`;
           break;
         case "mysql":
           // MySQL hash is a double SHA1 hash, so we need to hash the password twice
@@ -196,44 +185,45 @@ function openAll() {
           const mysqlResult = mysqlHash.digest("hex");
           mysqlHash.update(mysqlResult);
           mysqlResult = mysqlHash.digest("hex");
-          if (mysqlResult === hash) {
-            document.getElementById("result").innerHTML = "Password matches MySQL hash";
-          } else {
-            document.getElementById("result").innerHTML = "Password does not match MySQL hash";
-          }
+          document.getElementById("result").innerHTML = `MySQL Hash: ${mysqlResult}`;
           break;
         case "ntlm":
           // NTLM hash is a MD4 hash, which is not supported by the Web Crypto API
           // We can use a library like js-md4 to implement the MD4 algorithm
           const ntlmHash = md4(password);
-          if (ntlmHash === hash) {
-            document.getElementById("result").innerHTML = "Password matches NTLM hash";
-          } else {
-            document.getElementById("result").innerHTML = "Password does not match NTLM hash";
-          }
+          document.getElementById("result").innerHTML = `NTLM Hash: ${ntlmHash}`;
           break;
         case "sha256":
           const sha256Hash = crypto.createHash("sha256");
           sha256Hash.update(password);
           const sha256Result = sha256Hash.digest("hex");
-          if (sha256Result === hash) {
-            document.getElementById("result").innerHTML = "Password matches SHA256 hash";
-          } else {
-            document.getElementById("result").innerHTML = "Password does not match SHA256 hash";
-          }
+          document.getElementById("result").innerHTML = `SHA256 Hash: ${sha256Result}`;
           break;
         case "md5-email":
           // MD5 Email hash is a MD5 hash of the email address in lowercase
           const md5EmailHash = crypto.createHash("md5");
           md5EmailHash.update(password.toLowerCase());
           const md5EmailResult = md5EmailHash.digest("hex");
-          if (md5EmailResult === hash) {
-            document.getElementById("result").innerHTML = "Password matches MD5 Email hash";
-          } else {
-            document.getElementById("result").innerHTML = "Password does not match MD5 Email hash";
-          }
-          break
-
+          document.getElementById("result").innerHTML = `MD5 Email Hash: ${md5EmailResult}`;
+          break;
+        case "sha256-email":
+          // SHA256 Email hash is a SHA256 hash of the email address in lowercase
+          const sha256EmailHash = crypto.createHash("sha256");
+          sha256EmailHash.update(password.toLowerCase());
+          const sha256EmailResult = sha256EmailHash.digest("hex");
+          document.getElementById("result").innerHTML = `SHA256 Email Hash: ${sha256EmailResult}`;
+          break;
+        case "sha512":
+          const sha512Hash = crypto.createHash("sha512");
+          sha512Hash.update(password);
+          const sha512Result = sha512Hash.digest("hex");
+          document.getElementById("result").innerHTML = `SHA512 Hash: ${sha512Result}`;
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
 
 
 
