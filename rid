@@ -1,4 +1,4 @@
-name.file:vpn1.conf
+name.file:vpn1
 [Interface]
 PrivateKey = kNym8vqTQcSX0WBTvr1J8U+I82wXbQxbTWA118T4lnw=
 Address = 10.66.66.2/32
