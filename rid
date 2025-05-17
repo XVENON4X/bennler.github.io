@@ -14,12 +14,12 @@ PersistentKeepalive = 25
 
 name.file:vpn2.conf
 [Interface]
-PrivateKey = kNym8vqTQcSX0WBTvr1J8U+I82wXbQxbTWA118T4lnw=
+PrivateKey = qE+Djbt7HivpcvTR33cjvbbmw5/ueYBmtO6ZetTJ0HQ=
 Address = 10.66.66.2/32, fd42:42:42::2/128
 DNS = 1.1.1.1, 1.0.0.1
 
 [Peer]
-PublicKey = lrks7BqeUL3Nt7ldZvtvHYY/Qpjl6FObPdZm97rHJwQ=
-PresharedKey = t9HZvFxI8jZBzsSWSh6thJTsYARmIsJH4A+ExqSmIYU=
+PublicKey = /5eJis292iDKvNqalbcTfdz75TZAHuRFNuItUDpJQhg=
+PresharedKey = mQRL3t/tsHMqWRHXWtMEi40DnNJCskOH3nifCLUKLVQ=
 AllowedIPs = 0.0.0.0/0, ::/0
-Endpoint = 185.14.92.188:64960
+Endpoint = 10.0.11.126:63343
